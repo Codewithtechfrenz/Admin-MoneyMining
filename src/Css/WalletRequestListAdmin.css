@@ -1,0 +1,180 @@
+.withdraw-page {
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.withdraw-header h2 {
+  margin: 0;
+   font-family: "Maiandra GD", sans-serif 
+}
+.withdraw-header p{
+  font-family: "Maiandra GD", sans-serif 
+}
+
+.filter-box {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.filter-input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.withdraw-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.withdraw-table {
+  min-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr 1fr 2fr 2fr;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.table-head {
+  background-color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  border-bottom: 1px solid #222;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.table-row {
+  border-bottom: 1px solid #1f1f1f;
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #1a1a1a;
+}
+
+.table-row span {
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 14px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.table-row span:first-child {
+  text-align: left;
+}
+
+.approve-btn,
+.reject-btn {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 4px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.approve-btn {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.reject-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 70px;
+  text-align: center;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.status-badge.pending {
+  background: #3f2f05;
+  color: #facc15;
+}
+
+.status-badge.verified {
+  background: #052e16;
+  color: #22c55e;
+}
+
+.status-badge.rejected {
+  background: #3f0000;
+  color: #ef4444;
+}
+
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 14px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.pagination button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.wallet-info {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin: 20px 0;
+}
+
+.wallet-info h3 {
+  margin: 0 0 8px 0;
+}
+
+.wallet-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wallet-info li {
+  margin: 4px 0;
+}

@@ -1,0 +1,283 @@
+/* ===============================
+   PAGE CONTAINER
+================================= */
+.user-page {
+  padding: 20px;
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: #ffffff;
+  gap: 30px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   TABLE WRAPPER
+================================= */
+.user-table {
+  background: #111111;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid #1f1f1f;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   GRID STRUCTURE
+================================= */
+.table-head,
+.table-row {
+  display: grid;
+grid-template-columns:
+  2.5fr   /* User Name */
+  1.4fr   /* KYC Status (moved right) */
+  1.4fr   /* Bank Status (moved right) */
+  1.2fr   /* Joined Date */
+  1.2fr   /* Main Wallet */
+  1.2fr   /* Wallet Balance */
+  1.2fr;  /* Total Deposit */
+  align-items: center;
+  padding: 16px 20px;
+  gap: 10px;
+  min-width: 1000px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   TABLE HEADER
+================================= */
+.table-head {
+  background: #000000;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #d1d5db;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.table-head span {
+  text-align: center;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.table-head span:first-child {
+  text-align: left;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   TABLE ROW
+================================= */
+.table-row {
+  border-bottom: 1px solid #1f1f1f;
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: #1a1a1a;
+}
+
+.table-row span {
+  text-align: center;
+  font-size: 14px;
+  color: #e5e7eb;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* Align money to right */
+.money {
+  text-align: right;
+  font-weight: 500;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.green {
+  color: #22c55e;
+  font-weight: 600;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   USER INFO SECTION
+================================= */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-info strong {
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 600;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.user-info p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #9ca3af;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   AVATAR
+================================= */
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fca21d, #ff7a18);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+/* ===============================
+   STATUS BADGES
+================================= */
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  text-transform: capitalize;
+  white-space: nowrap;   /* prevents shrinking */
+  width: fit-content;    /* keeps proper button size */
+  font-family: "Maiandra GD", sans-serif;
+}
+
+/* Approved */
+.status.approved {
+  background: #052e16;
+  color: #22c55e;
+}
+
+/* Pending */
+.status.pending {
+  background: #3f2f05;
+  color: #facc15;
+}
+
+/* Rejected */
+.status.rejected {
+  background: #3b0a0a;
+  color: #ef4444;
+}
+.status{
+  margin: auto;
+}
+
+/* ===============================
+   NO RESULTS
+================================= */
+.no-results {
+  padding: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE (≤768px)
+================================= */
+
+@media (max-width: 768px) {
+
+  .user-page {
+    padding: 14px;
+  }
+
+  .user-table {
+    overflow-x: auto;
+  }
+
+  .table-head,
+  .table-row {
+    min-width: 850px; /* keeps grid structure and enables scroll */
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .table-head {
+    font-size: 12px;
+  }
+
+  .table-row span {
+    font-size: 13px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .user-info strong {
+    font-size: 13px;
+  }
+
+  .user-info p {
+    font-size: 10px;
+  }
+
+  .status {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+}
+
+
+/* ===============================
+   SMALL MOBILE (≤480px)
+================================= */
+
+@media (max-width: 480px) {
+
+  .table-head,
+  .table-row {
+    min-width: 700px;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .user-info strong {
+    font-size: 12px;
+  }
+
+  .user-info p {
+    font-size: 9px;
+  }
+
+  .status {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+}
+
+
+
+
+

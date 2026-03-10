@@ -1,0 +1,671 @@
+.dashboard {
+  color: #fff;
+}
+
+/* HEADER */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.dashboard-header h1 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.dashboard-header p {
+  font-size: 13px;
+  color: #999;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Notification bell */
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+  color: #f5911e;
+}
+
+.notification-icon .dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* Notification popup */
+.notification-popup {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #0b0b0b;
+  border: 1px solid #222;
+  border-radius: 8px;
+  width: 260px;
+  padding: 12px;
+  z-index: 100;
+}
+
+.notification-popup h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.notification-popup ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-popup li {
+  font-size: 13px;
+  padding: 6px 0;
+  color: #cccccc;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+.live-date-time {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1a1a1a;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.date-row,
+.time-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.date-row span {
+  font-size: 14px;
+  font-weight: 600;
+  color:#f5c62a ;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.time-row span {
+  font-size: 12px;
+  color: #f5c62a;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+
+
+
+
+.date-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;               /* ✅ pure black */
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Date & time input */
+.custom-date {
+  background: transparent;
+  color: #ffffff;                    /* ✅ text white */
+  border: none;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+  width: 150px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Chrome / Edge / Brave */
+.custom-date::-webkit-datetime-edit {
+  color: #fff;                    /* ✅ force white */
+}
+
+.custom-date::-webkit-datetime-edit-day-field,
+.custom-date::-webkit-datetime-edit-month-field,
+.custom-date::-webkit-datetime-edit-year-field,
+.custom-date::-webkit-datetime-edit-hour-field,
+.custom-date::-webkit-datetime-edit-minute-field {
+  color: #fff;                    /* ✅ force white */
+}
+
+/* separators like dd - mm - yyyy : */
+.custom-date::-webkit-datetime-edit-text {
+  color: #fff;
+  padding: 0 2px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Calendar icon */
+.custom-date::-webkit-calendar-picker-indicator {
+  filter: invert(1);              /* ✅ white icon */
+  cursor: pointer;
+}
+
+/* Firefox support */
+.custom-date {
+  color-scheme: dark;
+}
+
+/* "to" text */
+.date-separator {
+  color: #fff;
+  font-size: 12px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+/* ============================= */
+/* WELCOME BANNER ANIMATION */
+/* ============================= */
+
+.welcome-banner {
+  background: linear-gradient(135deg, #e7b93a, #e9ce76);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  color: #0c0c0c;
+  position: relative;
+  overflow: hidden;
+    font-family: "Maiandra OT GD Rm W01 DemiBold", sans-serif;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: bannerFadeSlide 1s ease forwards;
+}
+.status-text{
+  font-size: 20px;
+    font-family: "Maiandra OT GD Rm W01 DemiBold", sans-serif;
+}
+.status-text h1{
+    font-family: "Maiandra OT GD Rm W01 DemiBold", sans-serif;
+}
+/* Fade + Slide Animation */
+@keyframes bannerFadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Quote Animation */
+.welcome-banner h4 {
+  opacity: 0;
+  animation: fadeInText 1.5s ease forwards;
+  animation-delay: 0.6s;
+  line-height: 2.5cap;
+  font-family: "Maiandra GD", sans-serif
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================= */
+/* SYSTEM STATUS ANIMATION */
+/* ============================= */
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #7eca69;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(236, 230, 230, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 102, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* STATS GRID */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 👈 4 boxes per row */
+  gap: 40px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+.stat-card {
+  background: #ebe9e9;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+/* ================= GLASSMORPHISM STAT CARD ================= */
+
+/* ================= PREMIUM GLASSMORPHISM STAT CARD ================= */
+
+.stat-card {
+  position: relative;
+  padding: 28px;
+  min-height: 180px;  /* 👈 controls height */
+  min-width: 180px;  /* 👈 controls height */
+  border-radius: 18px;
+  gap: 20px;
+  font-family: "Maiandra GD", sans-serif;
+
+  /* Strong Glass Effect */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* ✨ Light reflection effect */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.25),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+/* Hover Effect */
+.stat-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border: 1px solid rgba(245, 192, 0, 0.6);
+
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(245, 192, 0, 0.25);
+}
+
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-icon {
+  background: rgba(245, 192, 0, 0.15);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* 👇 Make icon yellow */
+.stat-icon svg {
+  color: #f5c000;
+  stroke: #f5c000;
+}
+
+
+
+.stat-change {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* + values */
+.stat-change.positive {
+  color: #22c55e; /* green */
+}
+
+/* - values */
+.stat-change.negative {
+  color: #ef4444; /* red */
+}
+
+/* MODAL OVERLAY */
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+
+  animation:fadeIn 0.25s ease;
+}
+
+/* MODAL BOX */
+
+.modal{
+  background:#0f0f0f;
+  padding:24px;
+  border-radius:26px;
+  width:90%;          /* takes more screen width */
+  max-width:1000px;   /* increased popup width */
+}
+
+/* HEADER */
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+/* CLOSE BUTTON */
+
+.modal-close-btn{
+  background:transparent;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  padding:6px;
+  border-radius:6px;
+  transition:0.2s;
+}
+
+.modal-close-btn:hover{
+  background:rgba(255,255,255,0.08);
+  color:#f5c000;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes scaleIn{
+  from{
+    opacity:0;
+    transform:scale(.9);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+
+
+
+/* ===== FIX ICON & TEXT SPACING IN STAT CARD ===== */
+
+/* Make card content spaced properly */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* vertical spacing inside card */
+}
+
+/* Space between icon and text in top row */
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px; /* horizontal gap */
+}
+
+/* Add spacing between icon and title */
+.stat-icon {
+  margin-right: 10px;
+}
+
+/* Add spacing between title and value */
+.stat-card h3 {
+  margin-bottom: 6px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Add spacing below value */
+.stat-card p {
+  margin-top: 4px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+
+
+
+/* ============================
+   TABLET RESPONSIVE (≤1024px)
+============================ */
+
+@media (max-width:1024px){
+
+  /* Header */
+  .dashboard-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .header-actions{
+    width:100%;
+    justify-content:space-between;
+  }
+
+  /* Stats grid → 2 cards per row */
+  .stats-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap:24px;
+  }
+
+  .stat-card{
+    min-height:160px;
+    padding:22px;
+  }
+
+  /* Welcome banner */
+  .welcome-banner{
+    padding:24px;
+  }
+
+  /* Modal */
+  .modal{
+    max-width:90%;
+  }
+
+}
+
+
+/* ============================
+   MOBILE RESPONSIVE (≤768px)
+============================ */
+
+@media (max-width:768px){
+
+  .dashboard{
+    padding:10px;
+  }
+
+  /* Header */
+  .dashboard-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .dashboard-header h1{
+    font-size:20px;
+  }
+
+  .dashboard-header p{
+    font-size:12px;
+  }
+
+  .header-actions{
+    width:100%;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  /* Notification popup */
+  .notification-popup{
+    right:10px;
+    width:230px;
+  }
+
+  /* Date input */
+  .date-input{
+    width:100%;
+  }
+
+  .custom-date{
+    width:120px;
+    font-size:12px;
+  }
+
+  /* Welcome banner */
+  .welcome-banner{
+    padding:20px;
+  }
+
+  .status-text{
+    font-size:18px;
+  }
+
+  /* Stats grid → 1 column */
+  .stats-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .stat-card{
+    min-height:150px;
+    padding:20px;
+  }
+
+  .stat-icon{
+    padding:6px;
+  }
+
+  /* Modal */
+  .modal{
+    width:95%;
+    padding:20px;
+  }
+
+}
+
+
+/* ============================
+   SMALL MOBILE (≤480px)
+============================ */
+
+@media (max-width:480px){
+
+  .dashboard-header h1{
+    font-size:18px;
+  }
+
+  .live-date-time{
+    padding:6px 10px;
+  }
+
+  .date-row span{
+    font-size:12px;
+  }
+
+  .time-row span{
+    font-size:11px;
+  }
+
+  .notification-popup{
+    width:200px;
+  }
+
+  .stat-card{
+    padding:18px;
+    min-height:140px;
+  }
+
+  .stat-card h3{
+    font-size:14px;
+  }
+
+  .stat-card p{
+    font-size:12px;
+  }
+
+}
+
+
+

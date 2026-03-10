@@ -1,0 +1,151 @@
+.tickets-page {
+  display: flex;
+  height: 90vh;
+  background: #0f0f0f;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* LEFT PANEL */
+.ticket-list {
+  width: 30%;
+  border-right: 1px solid #222;
+  overflow-y: auto;
+}
+
+.ticket-filters {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #222;
+}
+
+.ticket-filters select,
+.ticket-filters input {
+  padding: 8px;
+  background: #1f2937;
+  border: none;
+  color: white;
+  border-radius: 6px;
+}
+
+.ticket-item {
+  padding: 15px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+
+.ticket-item:hover {
+  background: #1a1a1a;
+}
+
+.ticket-item.active {
+  background: #111827;
+}
+
+.ticket-item h4 {
+  margin: 0;
+}
+
+.ticket-item p {
+  font-size: 12px;
+  color: #aaa;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.status {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: capitalize;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.status.open {
+  background: #3f2f05;
+  color: #facc15;
+}
+
+.status.closed {
+  background: #052e16;
+  color: #22c55e;
+}
+
+/* RIGHT PANEL */
+.ticket-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-view {
+  margin: auto;
+  color: #777;
+}
+
+/* HEADER */
+.ticket-header {
+  padding: 20px;
+  border-bottom: 1px solid #222;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MESSAGES */
+.ticket-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message.user .bubble {
+  background: #1f2937;
+}
+
+.message.admin .bubble {
+  background: #2563eb;
+  text-align: right;
+  margin-left: auto;
+}
+
+.bubble {
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+/* REPLY */
+.ticket-reply {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #222;
+}
+
+.ticket-reply input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.ticket-reply button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  background: #22c55e;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.close-btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: #ef4444;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}

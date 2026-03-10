@@ -1,0 +1,90 @@
+.activity {
+  margin-top: 24px;
+  background: #0b0b0b;
+  border-radius: 14px;
+  border: 1px solid #1c1c1c;
+  padding: 20px;
+}
+
+/* Header */
+.activity h3 {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Table */
+.activity table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Head */
+.activity thead th {
+  text-align: left;
+  padding: 12px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9a9a9a;
+  border-bottom: 1px solid #1c1c1c;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Table Rows */
+.activity tbody tr {
+  transition: background 0.25s ease;
+}
+
+.activity tbody tr:hover {
+  background: #141414;
+}
+
+/* Table Cells */
+.activity tbody td {
+  padding: 14px 10px;
+  font-size: 13px;
+  color: #e0e0e0;
+  border-bottom: 1px solid #1c1c1c;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.amount {
+  font-weight: 600;
+}
+
+/* + value → green */
+.amount::first-letter {
+  color: inherit;
+}
+
+.amount:has(text("+")) {
+  color: #22c55e; /* green */
+}
+
+.amount:has(text("-")) {
+  color: #ef4444; /* red */
+}
+
+/* Status Badges */
+.done,
+.pending {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.done {
+  background:#22c55e;
+  
+}
+
+.pending {
+background: #f1b83a ;
+  
+}

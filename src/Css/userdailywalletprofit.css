@@ -1,0 +1,106 @@
+.daily-wallet-page {
+  padding: 20px;
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.wallet-header h2 {
+  margin: 0;
+  font-size: 20px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.wallet-header input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #1f2937;
+  color: #fff;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.wallet-table {
+  background: #111111;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 2fr;
+  padding: 12px 15px;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-head {
+  background: #000;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #222;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.table-row {
+  border-bottom: 1px solid #1f1f1f;
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: #1a1a1a;
+}
+
+.table-row span {
+  font-size: 14px;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.green {
+  color: #22c55e;
+  font-weight: 600;
+   font-family: "Maiandra GD", sans-serif 
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #888;
+}
+
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  line-height: 30px;
+}

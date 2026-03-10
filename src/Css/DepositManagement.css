@@ -1,0 +1,221 @@
+/* ===============================
+   PAGE
+================================= */
+.deposit-page {
+  padding: 20px;
+  background: #000000;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.deposit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.deposit-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.deposit-header p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ===============================
+   FILTER SECTION
+================================= */
+.filter-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #1f2937;
+  background: #111827;
+  color: white;
+  font-size: 13px;
+  outline: none;
+  min-width: 140px;
+  transition: 0.2s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.filter-input:focus {
+  border-color: #3b82f6;
+}
+
+/* ===============================
+   TABLE
+================================= */
+.deposit-table {
+  background: #0b0b0b;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #1f2937;
+}
+
+/* TABLE HEADER */
+.table-head {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 16px 20px;
+  background: linear-gradient(to right, #111111, #1a1a1a);
+  font-weight: 600;
+  font-size: 13px;
+  color: #9ca3af;
+  align-items: center;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* TABLE ROW */
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 18px 20px;
+  border-top: 1px solid #1f2937;
+  font-size: 14px;
+  align-items: center;
+  transition: background 0.2s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.table-row:hover {
+  background: #111827;
+}
+
+/* Remove extra border at bottom */
+.table-row:last-child {
+  border-bottom: none;
+}
+
+/* ===============================
+   COLUMN ALIGNMENT
+================================= */
+
+/* Right align 5th column (Amount) */
+.table-head span:nth-child(5),
+.table-row span:nth-child(5) {
+  text-align: right;
+}
+
+/* Prevent text overflow */
+.table-head span,
+.table-row span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ===============================
+   STATUS COLORS
+================================= */
+
+.verified {
+  color: #22c55e;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.rejected {
+  color: #ff3b30;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.pending {
+  color: #facc15;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* ===============================
+   NO RESULTS
+================================= */
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* ===============================
+   PAGINATION
+================================= */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.pagination button:hover {
+  background: #2563eb;
+}
+
+.pagination button:disabled {
+  background: #334155;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 13px;
+  color: #cbd5e1;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 1200px) {
+  .table-head,
+  .table-row {
+    font-size: 12px;
+    font-family: "Maiandra GD", sans-serif
+  }
+}
+
+@media (max-width: 992px) {
+  .table-head,
+  .table-row {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .deposit-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-input {
+    flex: 1;
+  }
+}

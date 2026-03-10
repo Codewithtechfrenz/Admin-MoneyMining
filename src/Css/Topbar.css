@@ -1,0 +1,159 @@
+.topbar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #030303;
+  padding: 0 16px;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.hamburger {
+  cursor: pointer;
+  color: #fff;
+}
+
+.hamburger:hover {
+  color: #facc15;
+}
+
+
+/* RIGHT SIDE */
+.topbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* BELL */
+.bell-wrapper {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  right: 55px;
+}
+
+.bell-wrapper svg {
+  color: #ffffff;
+}
+
+.bell-wrapper:hover {
+  background: #1f1f1f;
+  transform: scale(1.05);
+}
+
+.bell-wrapper:hover svg {
+  color: #facc15;
+}
+
+/* DOT */
+.bell-dot {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+/* POPUP */
+.notification-popup {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 220px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.notification-popup p {
+  font-size: 13px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+
+
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .bell-wrapper {
+    right: 20px;   /* reduce spacing */
+  }
+
+  .notification-popup {
+    right: 10px;
+    width: 200px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    padding: 0 12px;
+  }
+
+  .topbar-right {
+    gap: 8px;
+  }
+
+  .bell-wrapper {
+    right: 0;       /* fix bell disappearing */
+    margin-right: 6px;
+  }
+
+  .bell-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .notification-popup {
+    top: 45px;
+    right: 0;
+    width: 190px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+  .topbar {
+    height: 55px;
+  }
+
+  .bell-wrapper {
+    padding: 6px;
+  }
+
+  .notification-popup {
+    width: 170px;
+  }
+
+}
+

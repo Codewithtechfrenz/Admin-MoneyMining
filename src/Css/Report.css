@@ -1,0 +1,515 @@
+/* ===== SPACING FOR SETTINGS CARD OPTIONS ===== */
+.settings-card > * {
+  margin-bottom: 18px;
+}
+
+/* Extra spacing between form blocks */
+.settings-card label {
+  margin-top: 30px;
+}
+
+/* Space for radio group */
+.radio-group {
+  margin-top: 30px;
+}
+
+/* Space for toggle buttons */
+.toggle-group {
+  margin-top: 30px;
+}
+
+/* Space for user search input */
+.user-search {
+  margin-top: 30px;
+}
+
+/* Space between date range and other fields */
+.date-range {
+  margin-top: 30px;
+}
+
+/* Download button spacing */
+.download-btn {
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reports-page {
+  background: #000;
+  min-height: 92vh;
+  padding: 30px;
+  color: #fdfcfc;
+  font-family: "Maiandra GD", sans-serif
+}
+.reports-page h1{
+font-family: "Maiandra GD", sans-serif
+}
+.subtitle{
+  font-family: "Maiandra GD", sans-serif
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.reports-layout {
+  display: flex;
+  gap: 25px;
+}
+
+/* LEFT CARD */
+.settings-card {
+  width: 320px;
+  background: #111;
+  border-radius: 14px;
+  padding: 20px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.settings-card h3 {
+  margin-bottom: 20px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.settings-card label {
+  display: block;
+  font-size: 14px;
+  margin: 15px 0 6px;
+  color: #bbb;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #222;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-group button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px;
+  background: #222;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.toggle-group .active {
+  background: #f5b800;
+  color: #000;
+  font-weight: bold;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.radio-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+/* ===== RADIO BUTTON GLOW EFFECT ===== */
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.25s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Hide default radio */
+.radio-group input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Checked state */
+.radio-group input[type="radio"]:checked {
+  border-color: #f5b800;
+  box-shadow: 0 0 6px #f5b800, 0 0 12px rgba(245, 184, 0, 0.6);
+}
+
+/* Inner dot */
+.radio-group input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #f5b800;
+  border-radius: 50%;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Glow text when selected */
+.radio-group input[type="radio"]:checked + span,
+.radio-group label:has(input[type="radio"]:checked) {
+  color: #f5b800;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+.download-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f5b800;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* RIGHT CARD */
+.preview-card {
+  flex: 1;
+  background: #111;
+  border-radius: 14px;
+  padding: 20px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.badge {
+  background: #000;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #aaa;
+  font-family: "Maiandra GD", sans-serif
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  font-size: 13px;
+  color: #328bf1;
+  padding-bottom: 10px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+tbody td {
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.green {
+  color: #00e676;
+}
+
+.red {
+  color: #ff5252;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.status.completed {
+  background: rgb(110, 245, 137);
+  color: #000;
+}
+
+.status.pending {
+  background: #caa913;
+  color: #000;
+}
+
+.status.rejected {
+  background: #eb4848;
+  color: #fff;
+}
+
+.footer-text {
+  text-align: center;
+  color: #777;
+  margin-top: 15px;
+  font-size: 13px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+.react-datepicker-wrapper input {
+  background: #000;
+  border: none;
+  color: #fff;
+  width: 110px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.user-search {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #000;
+  border: 1px solid #222;
+  color: #fff;
+  border-radius: 8px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+
+
+input[type="date"] {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.download-wrapper {
+  position: relative;
+}
+
+.download-menu {
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.download-menu button {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.download-menu button:hover {
+  background: #222;
+}
+
+
+
+
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 14px;
+  width: 280px;
+  text-align: center;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.modal-box h4 {
+  margin-bottom: 20px;
+}
+
+.modal-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.modal-btn.excel {
+  background: #2c8b4d;
+  color: #000;
+}
+
+.modal-btn.pdf {
+  background: #7c3c3b;
+  color: #fff;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+
+.calendar-icon {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #facc15; /* yellow */
+}
+
+.filter-btn:hover {
+  transform: scale(1.1);
+}
+
+.calendar-icon {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLE */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+thead {
+  background: transparent !important; /* remove blue bar */
+}
+
+thead th {
+  text-align: left;
+  font-size: 13px;
+  color: #aaa;              /* soft text color */
+  padding: 12px 0;
+  background: transparent !important; /* remove blue */
+  border-bottom: 1px solid #222;       /* subtle divider */
+  font-family: "Maiandra GD", sans-serif;
+}
+
+/* BODY */
+tbody td {
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+  font-family: "Maiandra GD", sans-serif;
+}
+
+/* Hover row effect (optional but nice) */
+tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+
+
+

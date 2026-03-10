@@ -1,0 +1,250 @@
+/* ================= SIDEBAR BASE ================= */
+
+.sidebar {
+  height: 100vh;
+  background: #020202;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Expanded & Collapsed Width */
+.sidebar.open {
+  width: 240px;
+}
+
+.sidebar.closed {
+  width: 80px;
+}
+
+/* ================= LOGO ================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  margin-right: 12px;
+}
+
+.logo-img {
+  width: 62px;
+}
+
+/* ================= NAVIGATION ================= */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Nav Links */
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin: 4px 10px;
+  border-radius: 12px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  font-family: "Maiandra GD", sans-serif;
+}
+
+.sidebar nav a span{
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Icon size */
+.sidebar nav a svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Hover */
+.sidebar nav a:hover {
+  background: #f5c000;
+  color: #000;
+}
+
+/* Active */
+.sidebar nav a.active {
+  background: #f5c000;
+  color: #000;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* Icon color on hover / active */
+.sidebar nav a:hover svg,
+.sidebar nav a.active svg {
+  color: #000;
+}
+
+/* ================= BOTTOM SECTION ================= */
+
+.sidebar-bottom {
+  margin-top: auto; /* Pushes section to bottom */
+  padding: 16px 10px;
+}
+
+/* ================= ADMIN SECTION ================= */
+
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.admin-info:hover {
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.admin-avatar {
+  width: 36px;
+  height: 36px;
+  background:  #f7af15;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.admin-name {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.admin-role {
+  font-size: 12px;
+  color: #aaa;
+  font-family: "Maiandra GD", sans-serif
+}
+
+/* ================= LOGOUT BUTTON ================= */
+
+.logout {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-left: 6px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.logout svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;
+}
+
+.logout:hover {
+  background: #ec3438;
+  color: #ffffff;
+}
+
+.logout:hover svg {
+  stroke: #ffffff;
+}
+
+/* ================= LOGOUT MODAL ================= */
+
+.logout-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.logout-modal {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logout-modal h3 {
+  margin: 0;
+  color: #111827;
+}
+
+.logout-modal p {
+  margin: 10px 0 20px;
+  color: #6b7280;
+  font-size: 14px;
+  font-family: "Maiandra GD", sans-serif
+}
+
+.logout-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.logout-actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+.cancel-btn {
+  background: #2b8ce7;      /* green color like verify */
+  color: #ffffff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;       /* rounded corner */
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: "Maiandra GD", sans-serif
+}
+
+
+
+
+.confirm-btn {
+  background: #ec3438;
+  color: #ffffff;
+}
+
+.confirm-btn:hover {
+  background: #dc2626;
+}
+
+
+
+
+
+
