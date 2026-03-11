@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://werner-desertic-lorinda.ngrok-free.dev",
+  baseURL: "https://api.moneymining.co.in",
 });
 
 export default API;
