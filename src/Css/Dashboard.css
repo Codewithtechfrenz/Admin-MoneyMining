@@ -1,5 +1,9 @@
 .dashboard {
   color: #fff;
+<<<<<<< HEAD
+=======
+  box-sizing: border-box;
+>>>>>>> 2b004b1 (updated code)
 }
 
 /* HEADER */
@@ -8,7 +12,24 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+<<<<<<< HEAD
   font-family: "Maiandra GD", sans-serif
+=======
+  font-family: "Maiandra GD", sans-serif;
+  flex-wrap: nowrap;               /* keep time/date on same line */
+}
+
+/* allow title block to shrink so the clock can remain on the right */
+.dashboard-header > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;                   /* allow text to wrap if needed */
+}
+
+/* push the live date/time element to the far right */
+.dashboard-header .live-date-time {
+  margin-left: auto;
+  flex-shrink: 0;
+>>>>>>> 2b004b1 (updated code)
 }
 
 .dashboard-header h1 {
@@ -503,7 +524,11 @@
 
 
 
+<<<<<<< HEAD
 /* ============================
+=======
+/* ============================ 
+>>>>>>> 2b004b1 (updated code)
    TABLET RESPONSIVE (≤1024px)
 ============================ */
 
@@ -511,6 +536,7 @@
 
   /* Header */
   .dashboard-header{
+<<<<<<< HEAD
     flex-direction:column;
     align-items:flex-start;
     gap:12px;
@@ -519,6 +545,21 @@
   .header-actions{
     width:100%;
     justify-content:space-between;
+=======
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    /* prevent the clock from wrapping below title */
+    flex-wrap:nowrap;
+    gap:10px;
+  }
+
+  .header-actions{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    gap:12px;
+>>>>>>> 2b004b1 (updated code)
   }
 
   /* Stats grid → 2 cards per row */
@@ -532,12 +573,18 @@
     padding:22px;
   }
 
+<<<<<<< HEAD
   /* Welcome banner */
+=======
+>>>>>>> 2b004b1 (updated code)
   .welcome-banner{
     padding:24px;
   }
 
+<<<<<<< HEAD
   /* Modal */
+=======
+>>>>>>> 2b004b1 (updated code)
   .modal{
     max-width:90%;
   }
@@ -557,9 +604,18 @@
 
   /* Header */
   .dashboard-header{
+<<<<<<< HEAD
     flex-direction:column;
     align-items:flex-start;
     gap:14px;
+=======
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    /* keep date/time on same line as title, allow title text to wrap */
+    flex-wrap:nowrap;
+    gap:10px;
+>>>>>>> 2b004b1 (updated code)
   }
 
   .dashboard-header h1{
@@ -571,9 +627,15 @@
   }
 
   .header-actions{
+<<<<<<< HEAD
     width:100%;
     justify-content:space-between;
     flex-wrap:wrap;
+=======
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+>>>>>>> 2b004b1 (updated code)
     gap:10px;
   }
 
@@ -584,10 +646,13 @@
   }
 
   /* Date input */
+<<<<<<< HEAD
   .date-input{
     width:100%;
   }
 
+=======
+>>>>>>> 2b004b1 (updated code)
   .custom-date{
     width:120px;
     font-size:12px;
@@ -617,7 +682,10 @@
     padding:6px;
   }
 
+<<<<<<< HEAD
   /* Modal */
+=======
+>>>>>>> 2b004b1 (updated code)
   .modal{
     width:95%;
     padding:20px;
@@ -637,6 +705,7 @@
   }
 
   .live-date-time{
+<<<<<<< HEAD
     padding:6px 10px;
   }
 
@@ -646,6 +715,17 @@
 
   .time-row span{
     font-size:11px;
+=======
+    padding:6px 8px;
+  }
+
+  .date-row span{
+    font-size:11px;
+  }
+
+  .time-row span{
+    font-size:10px;
+>>>>>>> 2b004b1 (updated code)
   }
 
   .notification-popup{
@@ -663,9 +743,16 @@
 
   .stat-card p{
     font-size:12px;
+<<<<<<< HEAD
   }
+=======
+  } 
+>>>>>>> 2b004b1 (updated code)
 
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2b004b1 (updated code)

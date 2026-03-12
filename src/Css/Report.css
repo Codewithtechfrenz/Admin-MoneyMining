@@ -510,6 +510,48 @@ tbody tr:hover {
   background: rgba(255,255,255,0.03);
 }
 
+<<<<<<< HEAD
+=======
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .reports-page {
+    padding: 16px;
+  }
+
+  .reports-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .settings-card {
+    width: 100%;
+    padding: 16px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  thead th {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reports-page {
+    padding: 12px;
+  }
+
+  .settings-card {
+    padding: 12px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+}
+
+>>>>>>> 2b004b1 (updated code)
 
 
 

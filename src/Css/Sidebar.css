@@ -1,11 +1,60 @@
 /* ================= SIDEBAR BASE ================= */
 
+<<<<<<< HEAD
+=======
+/* make sidebar an overlay on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    width: 240px !important;    /* ensure full sidebar width on mobile */
+  }
+
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* show the close button on mobile - ALWAYS VISIBLE */
+  .sidebar-close {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* adjust sidebar header padding on mobile */
+  .sidebar-header {
+    padding: 16px;
+    margin-right: 0;
+  }
+
+  /* reduce logo size on mobile */
+  .logo-img {
+    width: 48px;
+  }
+}
+
+
+
+>>>>>>> 2b004b1 (updated code)
 .sidebar {
   height: 100vh;
   background: #020202;
   color: white;
   transition: width 0.3s ease;
+<<<<<<< HEAD
   overflow: hidden;
+=======
+  overflow-y: auto;             /* allow vertical scroll, not hidden */
+  overflow-x: hidden;           /* hide horizontal scroll */
+>>>>>>> 2b004b1 (updated code)
 
   display: flex;
   flex-direction: column;
@@ -23,18 +72,78 @@
 
 /* ================= LOGO ================= */
 
+<<<<<<< HEAD
+=======
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-right: 12px;
+  flex-shrink: 0;               /* prevent header from shrinking */
+  gap: 10px;
+  width: 100%;                  /* ensure full width */
+}
+
+>>>>>>> 2b004b1 (updated code)
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+<<<<<<< HEAD
   padding: 20px;
   margin-right: 12px;
 }
 
+=======
+  flex: 0 0 auto;               /* don't grow, let close button have space */
+  min-width: 0;                 /* allow flex to work */
+}
+
+
+>>>>>>> 2b004b1 (updated code)
 .logo-img {
   width: 62px;
 }
 
+<<<<<<< HEAD
+=======
+/* Close button - only appears on mobile */
+.sidebar-close {
+  display: none;                /* hidden by default (desktop) */
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
+  min-width: 44px;              /* ensure button is clickable and visible */
+  height: 44px;
+  width: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.sidebar-close:hover {
+  color: #ffffff;
+  background: rgba(255, 192, 0, 0.1);
+}
+
+.sidebar-close:active {
+  background: rgba(255, 192, 0, 0.2);
+}
+
+.sidebar-close svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+}
+
+
+>>>>>>> 2b004b1 (updated code)
 /* ================= NAVIGATION ================= */
 
 .sidebar nav {

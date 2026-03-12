@@ -148,4 +148,61 @@
   border: none;
   border-radius: 6px;
   color: white;
+<<<<<<< HEAD
+=======
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .tickets-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .ticket-list {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #222;
+    max-height: 200px;
+  }
+
+  .ticket-view {
+    flex: 1;
+  }
+
+  .ticket-messages {
+    padding: 12px;
+  }
+
+  .ticket-reply {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ticket-reply input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .ticket-reply button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-header {
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ticket-item {
+    padding: 12px;
+  }
+
+  .bubble {
+    max-width: 100%;
+  }
+>>>>>>> 2b004b1 (updated code)
 }

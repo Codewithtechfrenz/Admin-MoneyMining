@@ -103,4 +103,66 @@
 
 .pagination span {
   line-height: 30px;
+<<<<<<< HEAD
+=======
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .daily-wallet-page {
+    padding: 12px;
+  }
+
+  .wallet-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wallet-header h2 {
+    font-size: 18px;
+  }
+
+  .wallet-header input {
+    width: 100%;
+  }
+
+  .table-head,
+  .table-row {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 12px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .table-head {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-wallet-page {
+    padding: 10px;
+  }
+
+  .table-head,
+  .table-row {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .table-head {
+    font-size: 10px;
+  }
+
+  .table-row span {
+    font-size: 11px;
+  }
+
+  .pagination button {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+>>>>>>> 2b004b1 (updated code)
 }

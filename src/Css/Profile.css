@@ -10,6 +10,25 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 12px;
+  }
+}
+
+>>>>>>> 2b004b1 (updated code)
 /* ============================= */
 /* HEADER */
 /* ============================= */
@@ -55,6 +74,65 @@
   gap: 30px;
 }
 
+<<<<<<< HEAD
+=======
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 22px;
+  }
+
+  .profile-header p {
+    font-size: 13px;
+  }
+
+  .edit-profile-btn {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 12px;
+  }
+
+  .profile-header h1 {
+    font-size: 18px;
+  }
+
+  .profile-header p {
+    font-size: 12px;
+  }
+
+  .avatar-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .edit-profile-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+>>>>>>> 2b004b1 (updated code)
 /* ============================= */
 /* LEFT CARD */
 /* ============================= */
@@ -67,6 +145,22 @@
   border: 1px solid #222;
 }
 
+<<<<<<< HEAD
+=======
+/* Mobile Responsive for Profile Card */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 12px;
+  }
+}
+
+>>>>>>> 2b004b1 (updated code)
 .avatar-wrapper {
   position: relative;
   display: inline-block;

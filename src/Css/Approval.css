@@ -645,6 +645,200 @@ tr:hover {
   resize: vertical;
 }
 
+<<<<<<< HEAD
+=======
+/* Mobile Responsive Styles */
+
+/* CSS Grid Table Structure for Approval */
+.deposit-table {
+  background: #0d0d0d;
+  border-radius: 8px;
+  border: 1px solid #222;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns:
+    0.8fr   /* ID */
+    1.2fr   /* Username */
+    1.5fr   /* Email */
+    1.3fr   /* Aadhaar Status */
+    1.3fr   /* PAN Status */
+    1fr;    /* Action */
+  align-items: center;
+  padding: 16px 20px;
+  gap: 10px;
+  min-width: 900px;
+  font-family: "Maiandra GD", sans-serif;
+}
+
+.table-head {
+  background: #1a1a1a;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #d1d5db;
+}
+
+.table-head span {
+  text-align: center;
+}
+
+.table-head span:first-child {
+  text-align: left;
+}
+
+.table-row {
+  border-bottom: 1px solid #222;
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: #141414;
+}
+
+.table-row span {
+  text-align: center;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.table-row span:first-child {
+  text-align: left;
+}
+
+.edit-btn {
+  background: #0275d8;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  color: #9ca3af;
+  grid-column: 1 / -1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background: #1f1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .approval-container {
+    padding: 16px;
+  }
+
+  .filter-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .table-head,
+  .table-row {
+    grid-template-columns:
+      0.7fr   /* ID */
+      1.1fr   /* Username */
+      1.3fr   /* Email */
+      1.2fr   /* Aadhaar Status */
+      1.2fr   /* PAN Status */
+      0.9fr;  /* Action */
+    min-width: 800px;
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .table-head span {
+    font-size: 11px;
+  }
+
+  .edit-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .large-modal {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .approval-container {
+    padding: 12px;
+  }
+
+  .table-head,
+  .table-row {
+    grid-template-columns:
+      0.6fr   /* ID */
+      1fr     /* Username */
+      1.2fr   /* Email */
+      1fr     /* Aadhaar Status */
+      1fr     /* PAN Status */
+      0.8fr;  /* Action */
+    min-width: 700px;
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .table-head span {
+    font-size: 10px;
+  }
+
+  .edit-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .large-modal {
+    width: 95% !important;
+    padding: 12px;
+  }
+}
+
+>>>>>>> 2b004b1 (updated code)
 
 
 
