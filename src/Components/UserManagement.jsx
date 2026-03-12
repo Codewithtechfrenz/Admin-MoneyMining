@@ -54,12 +54,8 @@ const UserManagement = () => {
     <div className="user-page">
       <div className="user-table">
 
-        {/* HEADER */}
-<<<<<<< HEAD
-        <div className="table-head" style={{ gridTemplateColumns: "0.4fr 1.3fr 2fr 1.1fr 1fr 1.3fr 1.1fr 1.4fr 1.2fr 1.2fr" }}>
-=======
-        <div className="table-head">
->>>>>>> 2b004b1 (updated code)
+{/* HEADER */}
+<div className="table-head" style={{ gridTemplateColumns: "0.4fr 1.3fr 2fr 1.1fr 1fr 1.3fr 1.1fr 1.4fr 1.2fr 1.2fr" }}>
           <span>ID</span>
           <span>Username</span>
           <span>Email</span>
@@ -77,14 +73,11 @@ const UserManagement = () => {
         {/* BODY */}
         {users.length ? (
           users.map((user, i) => (
-            <div
-              className="table-row"
-              key={user.user_id || i}
-<<<<<<< HEAD
-              style={{ gridTemplateColumns: "0.4fr 1.3fr 2fr 1.1fr 1fr 1.3fr 1.1fr 1.4fr 1.2fr 1.2fr" }}
-=======
->>>>>>> 2b004b1 (updated code)
-            >
+<div
+  className="table-row"
+  key={user.user_id || i}
+  style={{ gridTemplateColumns: "0.4fr 1.3fr 2fr 1.1fr 1fr 1.3fr 1.1fr 1.4fr 1.2fr 1.2fr" }}
+>
               <span>{user.user_id}</span>
               <span>{user.username}</span>
               <span>{user.email}</span>
