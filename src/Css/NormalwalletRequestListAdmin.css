@@ -159,4 +159,58 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 15px;
+<<<<<<< HEAD
+=======
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .withdraw-page {
+    padding: 12px;
+  }
+
+  .withdraw-table {
+    min-width: auto;
+  }
+
+  .table-head, .table-row {
+    grid-template-columns: 40px 70px 120px 150px 100px 70px 80px 100px 150px 80px;
+    gap: 8px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .status-badge {
+    padding: 2px 4px;
+    font-size: 11px;
+  }
+
+  .edit-btn, .approve-btn, .reject-btn, .cancel-btn {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .withdraw-page {
+    padding: 10px;
+  }
+
+  .table-head, .table-row {
+    grid-template-columns: 35px 60px 100px 130px 80px 60px 70px 80px 130px 70px;
+    gap: 6px;
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .status-badge {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+
+  .edit-btn, .approve-btn, .reject-btn, .cancel-btn {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+>>>>>>> 2b004b1 (updated code)
 }

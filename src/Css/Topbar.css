@@ -8,11 +8,34 @@
   border-bottom: 1px solid #1f1f1f;
 }
 
+<<<<<<< HEAD
+=======
+/* center section holds logo - hidden on desktop, shown on mobile */
+.topbar-center {
+  flex: 1;
+  text-align: center;
+  display: none;                /* hide on desktop by default */
+}
+
+.topbar-logo {
+  height: 32px;
+}
+
+
+>>>>>>> 2b004b1 (updated code)
 .hamburger {
   cursor: pointer;
   color: #fff;
 }
 
+<<<<<<< HEAD
+=======
+.topbar-left,
+.topbar-right {
+  flex: 0 0 auto;
+}
+
+>>>>>>> 2b004b1 (updated code)
 .hamburger:hover {
   color: #facc15;
 }
@@ -31,7 +54,11 @@
   padding: 8px;
   border-radius: 8px;
   transition: background 0.2s ease, transform 0.2s ease;
+<<<<<<< HEAD
   right: 55px;
+=======
+  /* no manual right offset; flex layout handles alignment */
+>>>>>>> 2b004b1 (updated code)
 }
 
 .bell-wrapper svg {
@@ -109,6 +136,21 @@
 /* ============================= */
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
+=======
+  .topbar-center {
+    display: flex;              /* show logo on mobile */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topbar-logo {
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+>>>>>>> 2b004b1 (updated code)
 
   .topbar {
     padding: 0 12px;
@@ -119,7 +161,11 @@
   }
 
   .bell-wrapper {
+<<<<<<< HEAD
     right: 0;       /* fix bell disappearing */
+=======
+    /* no offset needed, use spacing from .topbar-right */
+>>>>>>> 2b004b1 (updated code)
     margin-right: 6px;
   }
 
