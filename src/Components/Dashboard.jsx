@@ -26,7 +26,6 @@ import {
 
 import "../Css/Dashboard.css";
 
-// ---------- Graph Data ----------
 const generateGraphData = (baseValue, trend, days = 30) => {
   const data = [];
   let current = baseValue;
@@ -56,23 +55,21 @@ const generateGraphData = (baseValue, trend, days = 30) => {
 const Dashboard = () => {
 
   const [selectedStat, setSelectedStat] = useState(null);
+  const [adminInfo, setAdminInfo] = useState(null);
 
-  // Live date & time
+  // LIVE DATE TIME
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
-
     const timer = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
 
     return () => clearInterval(timer);
-
   }, []);
 
-  // ESC key close modal
+  // ESC KEY CLOSE MODAL
   useEffect(() => {
-
     const handleEsc = (e) => {
       if (e.key === "Escape") {
         setSelectedStat(null);
@@ -80,26 +77,102 @@ const Dashboard = () => {
     };
 
     window.addEventListener("keydown", handleEsc);
-
     return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  // ---------- API CALL ----------
+  useEffect(() => {
+
+    fetch("admin/adminInfo")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === 1) {
+          setAdminInfo(data.data);
+        }
+      })
+      .catch((err) => {
+        console.error("Dashboard API Error:", err);
+      });
 
   }, []);
 
+  // ---------- STATS ----------
   const stats = [
-    { title: "Total Deposit", value: "0", raw: 1240500, icon: Wallet, trend: "up", change: "+12.5%" },
-    { title: "Daily ROI", value: "0", raw: 450200, icon: TrendingUp, trend: "up", change: "+5.2%" },
-    { title: "Today's Withdraw", value: "0", raw: 12500, icon: ArrowUpRight, trend: "down", change: "-2.1%" },
-    { title: "Account Balance", value: "0", raw: 850320, icon: IndianRupeeIcon, trend: "down", change: "-1.2%" },
-    { title: "Total Users", value: "0", raw: 2450, icon: Users, trend: "up", change: "+150 this week" },
-    { title: "Active Users", value: "0", raw: 1890, icon: UserCheck, trend: "neutral", change: "77%" },
-    { title: "New Approvals", value: "0", raw: 12, icon: UserPlus },
-    { title: "Open Tickets", value: "0", raw: 5, icon: AlertCircle }
+
+    {
+      title: "Total Deposit",
+      value: adminInfo ? adminInfo.total_deposit : "0",
+      raw: adminInfo ? adminInfo.total_deposit : 0,
+      icon: Wallet,
+      trend: "up",
+      change: "+12.5%"
+    },
+
+    {
+      title: "Daily ROI",
+      value: adminInfo ? adminInfo.TODAY_ROI : "0",
+      raw: adminInfo ? adminInfo.TODAY_ROI : 0,
+      icon: TrendingUp,
+      trend: "up",
+      change: "+5.2%"
+    },
+
+    {
+      title: "Today's Withdraw",
+      value: adminInfo ? adminInfo.today_withdraw : "0",
+      raw: adminInfo ? adminInfo.today_withdraw : 0,
+      icon: ArrowUpRight,
+      trend: "down",
+      change: "-2.1%"
+    },
+
+    {
+      title: "Account Balance",
+      value: adminInfo ? adminInfo.total_roi : "0",
+      raw: adminInfo ? adminInfo.total_roi : 0,
+      icon: IndianRupeeIcon,
+      trend: "neutral",
+      change: "-1.2%"
+    },
+
+    {
+      title: "Total Users",
+      value: adminInfo ? adminInfo.total_users : "0",
+      raw: adminInfo ? adminInfo.total_users : 0,
+      icon: Users,
+      trend: "up",
+      change: "+150 this week"
+    },
+
+    {
+      title: "Active Users",
+      value: adminInfo ? adminInfo.total_users : "0",
+      raw: adminInfo ? adminInfo.total_users : 0,
+      icon: UserCheck,
+      trend: "neutral",
+      change: "77%"
+    },
+
+    {
+      title: "New Approvals",
+      value: "12",
+      raw: 12,
+      icon: UserPlus
+    },
+
+    {
+      title: "Open Tickets",
+      value: "5",
+      raw: 5,
+      icon: AlertCircle
+    }
+
   ];
 
   return (
     <div className="dashboard">
 
-      {/* Header */}
+      {/* HEADER */}
       <div className="dashboard-header">
 
         <div>
@@ -133,7 +206,7 @@ const Dashboard = () => {
 
       </div>
 
-      {/* Welcome Banner */}
+      {/* WELCOME */}
       <div className="welcome-banner">
 
         <div className="system-status">
@@ -141,7 +214,9 @@ const Dashboard = () => {
           <span className="status-text" style={{fontFamily: "Maiandra GD, sans-serif"}}>System Online</span>
         </div>
 
-        <h1 style={{fontFamily: "Maiandra GD, sans-serif"}}>Welcome Back, Admin</h1>
+        <h1 style={{fontFamily: "Maiandra GD, sans-serif"}}>
+          Welcome Back, {adminInfo?.admin?.username || "Admin"}
+        </h1>
 
         <h4>
           Invest in yourself as much as you can; you are your own biggest asset by far.
@@ -152,7 +227,8 @@ const Dashboard = () => {
 
       </div>
 
-      {/* Stats */}
+      {/* ---------- STATS GRID ---------- */}
+
       <div className="stats-grid">
 
         {stats.map((stat, i) => (
@@ -198,7 +274,8 @@ const Dashboard = () => {
 
       </div>
 
-      {/* Graph Modal */}
+      {/* ---------- GRAPH MODAL ---------- */}
+
       {selectedStat && (
 
         <div
@@ -236,7 +313,7 @@ const Dashboard = () => {
                 </defs>
 
                 <CartesianGrid stroke="#222" vertical={false} />
-                <XAxis dataKey="date" stroke="#666" /><br></br>
+                <XAxis dataKey="date" stroke="#666" />
                 <YAxis stroke="#666" />
                 <Tooltip />
 
