@@ -645,8 +645,6 @@ tr:hover {
   resize: vertical;
 }
 
-<<<<<<< HEAD
-=======
 /* Mobile Responsive Styles */
 
 /* CSS Grid Table Structure for Approval */
@@ -838,7 +836,77 @@ tr:hover {
   }
 }
 
->>>>>>> 2b004b1 (updated code)
+/* Mobile Responsive for Traditional Tables */
+@media (max-width: 768px) {
+  .user-table th,
+  .user-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .user-table {
+    font-size: 13px;
+  }
+
+  .detail-table {
+    font-size: 14px;
+  }
+
+  .detail-table td {
+    padding: 10px 8px;
+  }
+
+  .drawer {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .drawer-header h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-table th,
+  .user-table td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+
+  .user-table {
+    font-size: 12px;
+  }
+
+  .detail-table {
+    font-size: 13px;
+  }
+
+  .detail-table td {
+    padding: 8px 6px;
+  }
+
+  .drawer {
+    width: 98%;
+    padding: 15px;
+  }
+
+  .drawer-header h3 {
+    font-size: 18px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .status {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+
 
 
 

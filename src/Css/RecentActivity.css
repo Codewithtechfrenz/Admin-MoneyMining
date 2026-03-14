@@ -85,11 +85,9 @@
 }
 
 .pending {
-background: #f1b83a ;
+  background: #f1b83a ;
   
 }
-<<<<<<< HEAD
-=======
 
 /* ============== MOBILE RESPONSIVE ============== */
 
@@ -148,4 +146,3 @@ background: #f1b83a ;
     font-size: 9px;
   }
 }
->>>>>>> 2b004b1 (updated code)

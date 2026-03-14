@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { Bell, Menu } from "lucide-react";
-<<<<<<< HEAD
-=======
 import logo from "../Images/Logo.png";
->>>>>>> 2b004b1 (updated code)
 import "../Css/Topbar.css";
 
 const Topbar = ({ toggleSidebar }) => {
@@ -20,14 +17,11 @@ const Topbar = ({ toggleSidebar }) => {
         />
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Center logo */}
       <div className="topbar-center">
         <img src={logo} alt="Money Mining Logo" className="topbar-logo" />
       </div>
 
->>>>>>> 2b004b1 (updated code)
       {/* Right */}
       <div className="topbar-right">
         <div

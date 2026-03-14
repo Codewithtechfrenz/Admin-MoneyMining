@@ -510,8 +510,6 @@ tbody tr:hover {
   background: rgba(255,255,255,0.03);
 }
 
-<<<<<<< HEAD
-=======
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .reports-page {
@@ -550,8 +548,6 @@ tbody tr:hover {
     font-size: 11px;
   }
 }
-
->>>>>>> 2b004b1 (updated code)
 
 
 

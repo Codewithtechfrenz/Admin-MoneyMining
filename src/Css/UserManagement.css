@@ -27,20 +27,6 @@
 .table-head,
 .table-row {
   display: grid;
-<<<<<<< HEAD
-grid-template-columns:
-  2.5fr   /* User Name */
-  1.4fr   /* KYC Status (moved right) */
-  1.4fr   /* Bank Status (moved right) */
-  1.2fr   /* Joined Date */
-  1.2fr   /* Main Wallet */
-  1.2fr   /* Wallet Balance */
-  1.2fr;  /* Total Deposit */
-  align-items: center;
-  padding: 16px 20px;
-  gap: 10px;
-  min-width: 1000px;
-=======
   grid-template-columns:
     0.8fr   /* ID */
     1.2fr   /* Username */
@@ -56,10 +42,7 @@ grid-template-columns:
   padding: 16px 20px;
   gap: 10px;
   min-width: 1100px;
->>>>>>> 2b004b1 (updated code)
-   font-family: "Maiandra GD", sans-serif 
 }
-
 /* ===============================
    TABLE HEADER
 ================================= */
@@ -206,61 +189,9 @@ grid-template-columns:
 
 
 
-
-
-
-<<<<<<< HEAD
-
 /* ===============================
-   MOBILE RESPONSIVE (≤768px)
-================================= */
-
-@media (max-width: 768px) {
-
-  .user-page {
-    padding: 14px;
-  }
-
-  .user-table {
-    overflow-x: auto;
-  }
-
-  .table-head,
-  .table-row {
-    min-width: 850px; /* keeps grid structure and enables scroll */
-    padding: 12px 14px;
-    gap: 8px;
-  }
-
-  .table-head {
-    font-size: 12px;
-  }
-
-  .table-row span {
-    font-size: 13px;
-  }
-
-  .avatar {
-    width: 32px;
-    height: 32px;
-    font-size: 12px;
-  }
-
-  .user-info strong {
-    font-size: 13px;
-  }
-
-  .user-info p {
-    font-size: 10px;
-  }
-
-  .status {
-    font-size: 10px;
-    padding: 4px 10px;
-=======
-/* =====================================
    TABLET RESPONSIVE (≤1024px)
-===================================== */
+================================= */
 
 @media (max-width:1024px){
 
@@ -271,13 +202,16 @@ grid-template-columns:
   .table-head,
   .table-row{
     grid-template-columns:
-      2.0fr
-      1.3fr
-      1.3fr
-      1fr
-      1fr
-      1fr
-      1fr;
+      0.7fr   /* ID */
+      1.1fr   /* Username */
+      1.3fr   /* Email */
+      1.1fr   /* Mobile */
+      1.2fr   /* Created At */
+      1.2fr   /* Main Wallet */
+      1.1fr   /* Wallet */
+      1.2fr   /* Total Deposited */
+      1fr     /* KYC */
+      1fr;    /* Bank */
     padding:14px 15px;
     min-width:900px;
   }
@@ -299,58 +233,15 @@ grid-template-columns:
   .status{
     font-size:11px;
     padding:5px 12px;
->>>>>>> 2b004b1 (updated code)
   }
 
 }
 
 
-/* ===============================
-<<<<<<< HEAD
-   SMALL MOBILE (≤480px)
-================================= */
+/* ====================================
+   MOBILE RESPONSIVE (≤768px)
+==================================== */
 
-@media (max-width: 480px) {
-
-  .table-head,
-  .table-row {
-    min-width: 700px;
-    padding: 10px 12px;
-    gap: 6px;
-  }
-
-  .avatar {
-    width: 28px;
-    height: 28px;
-    font-size: 11px;
-  }
-
-  .user-info strong {
-    font-size: 12px;
-  }
-
-  .user-info p {
-    font-size: 9px;
-  }
-
-  .status {
-    font-size: 9px;
-=======
-   MOBILE TABLE SCROLL FIX
-================================= */
-
-@media (max-width:1024px){
-
-  .user-table{
-    width:100%;
-    overflow-x:auto;
-    overflow-y:hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-}
-
-/* Mobile */
 @media (max-width:768px){
 
   .user-page {
@@ -367,40 +258,59 @@ grid-template-columns:
   .table-head,
   .table-row{
     grid-template-columns:
-      0.7fr   /* ID */
-      1.1fr   /* Username */
-      1.3fr   /* Email */
-      1.1fr   /* Mobile */
-      1.2fr   /* Created At */
-      1.2fr   /* Main Wallet */
-      1.1fr   /* Wallet */
-      1.2fr   /* Total Deposited */
-      1fr     /* KYC */
-      1fr;    /* Bank */
-    min-width: 950px;
+      0.6fr   /* ID */
+      1fr     /* Username */
+      1.4fr   /* Email */
+      1fr     /* Mobile */
+      1.1fr   /* Created At */
+      1.1fr   /* Main Wallet */
+      1fr     /* Wallet */
+      1.1fr   /* Total Deposited */
+      0.9fr   /* KYC */
+      0.9fr;  /* Bank */
+    min-width: 850px;
     padding: 12px 14px;
     font-size: 12px;
+    gap: 8px;
   }
 
   .table-head span {
     font-size: 11px;
   }
 
+  .table-row span {
+    font-size: 12px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .user-info strong {
+    font-size: 13px;
+  }
+
+  .user-info p {
+    font-size: 10px;
+  }
+
   .status {
     font-size: 10px;
->>>>>>> 2b004b1 (updated code)
     padding: 4px 8px;
   }
 
 }
 
-<<<<<<< HEAD
-=======
-/* Small Mobile */
+/* ===============================
+   SMALL MOBILE (≤480px)
+================================= */
+
 @media (max-width:480px){
 
   .user-page {
-    padding: 10px;
+    padding: 8px;
   }
 
   .user-table{
@@ -408,23 +318,24 @@ grid-template-columns:
     width:100%;
     overflow-x:auto;
     border-radius: 8px;
+    -webkit-overflow-scrolling: touch;
   }
 
   .table-head,
   .table-row{
     grid-template-columns:
-      1fr     /* ID */
-      1.3fr   /* Username */
-      1.8fr   /* Email */
-      1.2fr   /* Mobile */
-      1.3fr   /* Created At */
-      1.3fr   /* Main Wallet */
-      1.1fr   /* Wallet */
-      1.2fr   /* Total Deposited */
-      1fr     /* KYC */
-      1fr;    /* Bank */
-    min-width: auto;
-    padding: 10px 12px;
+      0.5fr   /* ID */
+      0.9fr   /* Username */
+      1.3fr   /* Email */
+      0.9fr   /* Mobile */
+      1fr     /* Created At */
+      1fr     /* Main Wallet */
+      0.9fr   /* Wallet */
+      1fr     /* Total Deposited */
+      0.8fr   /* KYC */
+      0.8fr;  /* Bank */
+    min-width: 700px;
+    padding: 8px 10px;
     font-size: 11px;
     gap: 6px;
   }
@@ -433,14 +344,22 @@ grid-template-columns:
     font-size: 10px;
   }
 
+  .table-row span {
+    font-size: 11px;
+  }
+
   .user-info strong {
     font-size: 12px;
   }
 
+  .user-info p {
+    font-size: 10px;
+  }
+
   .avatar {
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
   }
 
   .status {
@@ -450,8 +369,63 @@ grid-template-columns:
 
 }
 
->>>>>>> 2b004b1 (updated code)
+/* ===============================
+   EXTRA SMALL MOBILE (≤360px)
+================================= */
 
+@media (max-width:360px){
+
+  .user-page {
+    padding: 6px;
+  }
+
+  .table-head,
+  .table-row{
+    grid-template-columns:
+      0.4fr   /* ID */
+      0.8fr   /* Username */
+      1.2fr   /* Email */
+      0.8fr   /* Mobile */
+      0.9fr   /* Created At */
+      0.9fr   /* Main Wallet */
+      0.8fr   /* Wallet */
+      0.9fr   /* Total Deposited */
+      0.7fr   /* KYC */
+      0.7fr;  /* Bank */
+    min-width: 600px;
+    padding: 6px 8px;
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .table-head span {
+    font-size: 9px;
+  }
+
+  .table-row span {
+    font-size: 10px;
+  }
+
+  .user-info strong {
+    font-size: 11px;
+  }
+
+  .user-info p {
+    font-size: 9px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .status {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
+
+}
 
 
 

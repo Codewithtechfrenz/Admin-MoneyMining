@@ -1,7 +1,5 @@
 /* ================= SIDEBAR BASE ================= */
 
-<<<<<<< HEAD
-=======
 /* make sidebar an overlay on small screens */
 @media (max-width: 768px) {
   .sidebar {
@@ -43,18 +41,13 @@
 
 
 
->>>>>>> 2b004b1 (updated code)
 .sidebar {
   height: 100vh;
   background: #020202;
   color: white;
   transition: width 0.3s ease;
-<<<<<<< HEAD
-  overflow: hidden;
-=======
   overflow-y: auto;             /* allow vertical scroll, not hidden */
   overflow-x: hidden;           /* hide horizontal scroll */
->>>>>>> 2b004b1 (updated code)
 
   display: flex;
   flex-direction: column;
@@ -72,8 +65,6 @@
 
 /* ================= LOGO ================= */
 
-<<<<<<< HEAD
-=======
 .sidebar-header {
   display: flex;
   align-items: center;
@@ -85,29 +76,18 @@
   width: 100%;                  /* ensure full width */
 }
 
->>>>>>> 2b004b1 (updated code)
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-<<<<<<< HEAD
-  padding: 20px;
-  margin-right: 12px;
-}
-
-=======
   flex: 0 0 auto;               /* don't grow, let close button have space */
   min-width: 0;                 /* allow flex to work */
 }
 
-
->>>>>>> 2b004b1 (updated code)
 .logo-img {
   width: 62px;
 }
 
-<<<<<<< HEAD
-=======
 /* Close button - only appears on mobile */
 .sidebar-close {
   display: none;                /* hidden by default (desktop) */
@@ -142,8 +122,6 @@
   stroke-width: 2.5;
 }
 
-
->>>>>>> 2b004b1 (updated code)
 /* ================= NAVIGATION ================= */
 
 .sidebar nav {

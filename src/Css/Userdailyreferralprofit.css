@@ -106,8 +106,6 @@
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-<<<<<<< HEAD
-=======
 }
 
 /* Mobile Responsive */
@@ -163,5 +161,4 @@
     padding: 4px 8px;
     font-size: 12px;
   }
->>>>>>> 2b004b1 (updated code)
 }

@@ -1,42 +1,61 @@
+/* ======================================
+   MAIN PAGE
+====================================== */
+
 .tickets-page {
   display: flex;
   height: 90vh;
-  background: #0f0f0f;
+  background: #0f172a;
   color: white;
   font-family: "Segoe UI", sans-serif;
 }
 
-/* LEFT PANEL */
+
+/* ======================================
+   LEFT PANEL (TICKET LIST)
+====================================== */
+
 .ticket-list {
   width: 30%;
-  border-right: 1px solid #222;
+  border-right: 1px solid #1f2937;
   overflow-y: auto;
+  background: #020617;
 }
+
+
+/* FILTER BAR */
 
 .ticket-filters {
   padding: 15px;
   display: flex;
   gap: 10px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #1f2937;
 }
 
 .ticket-filters select,
 .ticket-filters input {
-  padding: 8px;
+  flex: 1;
+  padding: 8px 10px;
   background: #1f2937;
   border: none;
   color: white;
   border-radius: 6px;
+  outline: none;
+  font-size: 13px;
 }
+
+
+/* TICKET ITEM */
 
 .ticket-item {
   padding: 15px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #111827;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .ticket-item:hover {
-  background: #1a1a1a;
+  background: #1e293b;
 }
 
 .ticket-item.active {
@@ -45,20 +64,27 @@
 
 .ticket-item h4 {
   margin: 0;
+  font-size: 14px;
 }
 
 .ticket-item p {
+  margin-top: 4px;
   font-size: 12px;
-  color: #aaa;
-   font-family: "Maiandra GD", sans-serif 
+  color: #9ca3af;
+  font-family: "Maiandra GD", sans-serif;
 }
+
+
+/* ======================================
+   STATUS BADGE
+====================================== */
 
 .status {
   font-size: 11px;
   padding: 4px 10px;
   border-radius: 20px;
   text-transform: capitalize;
-   font-family: "Maiandra GD", sans-serif 
+  font-family: "Maiandra GD", sans-serif;
 }
 
 .status.open {
@@ -71,75 +97,139 @@
   color: #22c55e;
 }
 
-/* RIGHT PANEL */
+
+/* ======================================
+   RIGHT PANEL
+====================================== */
+
 .ticket-view {
   flex: 1;
   display: flex;
   flex-direction: column;
+  background: #020617;
 }
 
 .empty-view {
   margin: auto;
-  color: #777;
+  color: #6b7280;
 }
 
-/* HEADER */
+
+/* ======================================
+   HEADER
+====================================== */
+
 .ticket-header {
-  padding: 20px;
-  border-bottom: 1px solid #222;
+  padding: 18px;
+  border-bottom: 1px solid #1f2937;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-/* MESSAGES */
+.ticket-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.ticket-header p {
+  margin-top: 3px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+
+/* ======================================
+   MESSAGE AREA
+====================================== */
+
 .ticket-messages {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
 }
 
+
+/* CHAT MESSAGE */
+
 .message {
   margin-bottom: 15px;
+  display: flex;
 }
 
-.message.user .bubble {
-  background: #1f2937;
+.message.user {
+  justify-content: flex-start;
 }
 
-.message.admin .bubble {
-  background: #2563eb;
-  text-align: right;
-  margin-left: auto;
+.message.admin {
+  justify-content: flex-end;
 }
 
 .bubble {
-  padding: 10px 15px;
+  padding: 10px 14px;
   border-radius: 8px;
   max-width: 60%;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
-/* REPLY */
+
+/* USER MESSAGE */
+
+.message.user .bubble {
+  background: #1f2937;
+  color: white;
+}
+
+
+/* ADMIN MESSAGE */
+
+.message.admin .bubble {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* ======================================
+   REPLY BOX
+====================================== */
+
 .ticket-reply {
   display: flex;
   padding: 15px;
-  border-top: 1px solid #222;
+  border-top: 1px solid #1f2937;
+  background: #020617;
 }
 
 .ticket-reply input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
   border-radius: 6px;
   border: none;
+  outline: none;
+  background: #1f2937;
+  color: white;
 }
 
 .ticket-reply button {
   margin-left: 10px;
-  padding: 8px 15px;
+  padding: 10px 18px;
   background: #22c55e;
   border: none;
   border-radius: 6px;
   color: white;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+.ticket-reply button:hover {
+  background: #16a34a;
+}
+
+
+/* ======================================
+   CLOSE BUTTON
+====================================== */
 
 .close-btn {
   margin-left: 10px;
@@ -148,61 +238,303 @@
   border: none;
   border-radius: 6px;
   color: white;
-<<<<<<< HEAD
-=======
+  cursor: pointer;
 }
 
-/* Mobile Responsive */
+.close-btn:hover {
+  background: #dc2626;
+}
+
+
+/* ======================================
+   TABLET RESPONSIVE
+====================================== */
+
+@media (max-width: 900px) {
+
+  .ticket-list {
+    width: 40%;
+  }
+
+  .ticket-header {
+    padding: 15px;
+  }
+
+  .ticket-header h3 {
+    font-size: 16px;
+  }
+
+  .ticket-messages {
+    padding: 15px;
+  }
+
+  .bubble {
+    max-width: 70%;
+    font-size: 12px;
+  }
+
+  .ticket-reply {
+    padding: 12px;
+  }
+
+  .ticket-reply input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .ticket-reply button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .close-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+}
+
+
+/* ======================================
+   MOBILE RESPONSIVE
+====================================== */
+
 @media (max-width: 768px) {
+
   .tickets-page {
     flex-direction: column;
     height: auto;
+    min-height: 100vh;
   }
 
   .ticket-list {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #1f2937;
     max-height: 200px;
+    flex-shrink: 0;
   }
 
   .ticket-view {
     flex: 1;
+    height: calc(100vh - 200px);
+    min-height: 400px;
   }
 
-  .ticket-messages {
+  .ticket-filters {
     padding: 12px;
-  }
-
-  .ticket-reply {
-    flex-direction: column;
     gap: 8px;
   }
 
-  .ticket-reply input {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-
-  .ticket-reply button {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .ticket-header {
-    padding: 12px;
-    flex-direction: column;
-    gap: 8px;
+  .ticket-filters select,
+  .ticket-filters input {
+    padding: 6px 8px;
+    font-size: 12px;
   }
 
   .ticket-item {
     padding: 12px;
   }
 
-  .bubble {
-    max-width: 100%;
+  .ticket-item h4 {
+    font-size: 13px;
   }
->>>>>>> 2b004b1 (updated code)
+
+  .ticket-item p {
+    font-size: 11px;
+  }
+
+  .ticket-header {
+    padding: 12px;
+  }
+
+  .ticket-header h3 {
+    font-size: 16px;
+  }
+
+  .ticket-header p {
+    font-size: 11px;
+  }
+
+  .ticket-messages {
+    padding: 12px;
+  }
+
+  .bubble {
+    max-width: 85%;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .ticket-reply {
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ticket-reply input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .ticket-reply button {
+    width: 100%;
+    margin-left: 0;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .close-btn {
+    margin-left: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .status {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+}
+
+
+/* ======================================
+   SMALL MOBILE
+====================================== */
+
+@media (max-width: 480px) {
+
+  .ticket-header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .ticket-header h3 {
+    font-size: 15px;
+  }
+
+  .ticket-header p {
+    font-size: 10px;
+  }
+
+  .ticket-item {
+    padding: 10px;
+  }
+
+  .ticket-item h4 {
+    font-size: 12px;
+  }
+
+  .ticket-item p {
+    font-size: 10px;
+  }
+
+  .ticket-filters {
+    padding: 10px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .ticket-filters select,
+  .ticket-filters input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .ticket-messages {
+    padding: 10px;
+  }
+
+  .bubble {
+    max-width: 90%;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .ticket-reply {
+    padding: 10px;
+  }
+
+  .ticket-reply input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .ticket-reply button {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .close-btn {
+    margin-left: 6px;
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .status {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+}
+
+/* ======================================
+   EXTRA SMALL MOBILE
+====================================== */
+
+@media (max-width: 360px) {
+
+  .ticket-header {
+    padding: 8px;
+  }
+
+  .ticket-header h3 {
+    font-size: 14px;
+  }
+
+  .ticket-item {
+    padding: 8px;
+  }
+
+  .ticket-filters {
+    padding: 8px;
+  }
+
+  .ticket-messages {
+    padding: 8px;
+  }
+
+  .bubble {
+    max-width: 95%;
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  .ticket-reply {
+    padding: 8px;
+  }
+
+  .ticket-reply input {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .ticket-reply button {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .close-btn {
+    margin-left: 4px;
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .status {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
+
 }
