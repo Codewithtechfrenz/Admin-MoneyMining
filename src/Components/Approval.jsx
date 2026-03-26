@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import API from "../api";
 import "../Css/Approval.css";
 
 const KycManagement = () => {
-  const BASE_URL = "https://werner-desertic-lorinda.ngrok-free.dev";
+  // const BASE_URL = "https://werner-desertic-lorinda.ngrok-free.dev";
   const AUTH_TOKEN = localStorage.getItem("authToken");
 
   const [kycList, setKycList] = useState([]);
@@ -29,8 +29,8 @@ const KycManagement = () => {
         ...(email ? { email } : {}),
       };
 
-      const response = await axios.post(
-        `${BASE_URL}/admin/userKycListAdmin`,
+      const response = await API.post(
+       "/admin/userKycListAdmin",
         payload,
         {
           headers: {
@@ -67,8 +67,8 @@ const KycManagement = () => {
   // ================= FETCH SINGLE =================
   const handleEdit = async (userId) => {
     try {
-      const response = await axios.post(
-        `${BASE_URL}/admin/getSingleKycDetail`,
+      const response = await API.post(
+        "/admin/getSingleKycDetail",
         { user_id: userId },
         {
           headers: {
@@ -113,8 +113,8 @@ const KycManagement = () => {
         pan_reject_reason: type === "reject" ? panRejectReason : "",
       };
 
-      const response = await axios.post(
-        `${BASE_URL}/admin/verifyKyc`,
+      const response = await API.post(
+        "/admin/verifyKyc",
         payload,
         {
           headers: {
